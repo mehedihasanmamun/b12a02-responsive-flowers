@@ -1,8 +1,214 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .inter-font {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+/* common style  */
+
+/* navbar section  */
+header {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+}
+.container-logo {
+  font-size: 3rem;
+  font-weight: 100;
+  font-style: italic;
+  color: #e95a08;
+}
+
+.container-menu-list {
+  display: flex;
+  margin-left: 350px;
+}
+.container-menu-list-item {
+  list-style: none;
+}
+
+.container-menu-list-item a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+.container-menu-list li {
+  list-style: none;
+  margin-left: 3rem;
+}
+
+.container-menu-list li a {
+  text-decoration: none;
+}
+.cart {
+  color: #252432;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.container-menu-list li:nth-child(1) a {
+  color: #252432;
+  font-weight: 600;
+}
+
+.container-menu-list li:nth-child(2) a {
+  color: #8987a1;
+}
+
+.container-menu-list li:nth-child(3) a {
+  color: #8987a1;
+}
+
+/* hero section  */
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  margin-top: 210px;
+}
+
+.container-header-text {
+  max-width: 570px;
+}
+
+.main-header {
+  font-size: 4.1rem;
+  margin-bottom: 13px;
+}
+
+.main-header-description {
+  max-width: 570px;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.main-header-span {
+  font-family: noto;
+  font-weight: 700;
+}
+.main-header-span2 {
+  color: #e95a08;
+  font-family: noto;
+  font-weight: 700;
+}
+
+.container-header-image img {
+  width: 100%;
+}
+
+/* main section start  */
+main {
+  max-width: 1140px;
+  margin: 120px auto;
+  padding: 20px;
+}
+
+.container-our-plants {
+  text-align: center;
+  padding: 50px;
+}
+
+.container-our-plants-header {
+  font-size: 3.125rem;
+  margin-bottom: 16px;
+}
+
+.container-our-plants-description {
+  font-size: 1.375rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* card section  */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.container-our-plants-cards {
+  text-align: center;
+  padding: 15px;
+}
+
+.container-our-plants-cards img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.container-our-plants-cards h3 {
+  margin-bottom: 5px;
+  font-size: 1.374rem;
+  font-weight: 500;
+}
+
+.container-our-plants-cards p {
+  margin-bottom: 10px;
+  font-size: 1.374rem;
+  font-weight: 600;
+}
+
+.cards-button {
+  background-color: #e95a08;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+.cards-button:hover {
+  background-color: #d94c08;
+}
+
+/* media queries for small devices */
+@media screen and (max-width: 768px) {
+  .container-menu-list {
+    display: none;
+  }
+
+  .container-logo {
+    font-size: 2.4rem;
+  }
+
+  .container-header {
+    flex-direction: column-reverse;
+    margin-top: auto;
+    padding: 0;
+  }
+  main {
+    margin-top: 65px auto;
+  }
+
+  .main-header {
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+
+  .container-header-text {
+    padding: 16px;
+  }
+
+  .container-our-plants {
+    padding: 5px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
