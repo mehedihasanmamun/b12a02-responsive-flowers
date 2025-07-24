@@ -26,12 +26,6 @@ header {
   align-items: center;
   padding: 22px;
 }
-.container-logo {
-  font-size: 3rem;
-  font-weight: 100;
-  font-style: italic;
-  color: #e95a08;
-}
 
 .container-menu-list {
   display: flex;
@@ -226,14 +220,117 @@ main {
   margin-bottom: 15px;
 }
 
+/* latest-deals-section  */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.card.large img {
+  max-height: 100%;
+  height: 100%;
+}
+
+.card.large {
+  grid-row: span 2;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.content a {
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  border-bottom: 3px solid white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Join the colorful Bunch  */
+.banner {
+  background-image: url("./assets/news-letter-bg.png"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.subscribe-box {
+  display: flex;
+  max-width: 830px;
+  margin: 0 auto;
+  height: 50px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-box input {
+  flex: 1;
+  border: none;
+  padding: 0 15px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.subscribe-box button {
+  background-color: #f15a24;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-box button:hover {
+  background-color: #d94e1f;
+}
 /* media queries for small devices */
 @media screen and (max-width: 768px) {
   .container-menu-list {
     display: none;
-  }
-
-  .container-logo {
-    font-size: 2.4rem;
   }
 
   .container-header {
@@ -269,7 +366,7 @@ main {
   }
   .flower-lover-content {
     padding: 0;
-    margin-top: -100px;
+    margin-top: -80px;
   }
 
   .flower-lover-content ul {
@@ -282,5 +379,19 @@ main {
   }
   .flower-lover-image .badge {
     display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .card img,
+  .card.large img {
+    max-height: 200px;
+  }
+
+  .card.large {
+    grid-row: auto;
   }
 }
